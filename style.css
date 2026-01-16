@@ -1,0 +1,139 @@
+/* ========== Base ========== */
+body {
+  font-family: Arial, sans-serif;
+  background: #f3f4f6;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 6px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+/* ========== Header ========== */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.date-box {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+}
+
+.date-box input {
+  padding: 6px 8px;
+  font-size: 14px;
+}
+
+/* ========== Table ========== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th {
+  background: #f9fafb;
+  font-weight: 600;
+}
+
+th, td {
+  border: 1px solid #d1d5db;
+  padding: 8px;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* ========== Buttons ========== */
+button {
+  padding: 6px 12px;
+  font-size: 14px;
+  border: 1px solid #374151;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background: #f3f4f6;
+}
+
+button.danger {
+  border-color: #b91c1c;
+  color: #b91c1c;
+}
+
+/* ========== Footer Section ========== */
+.footer-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.total-box {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.download-btn {
+  background: #111827;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  font-size: 15px;
+}
+
+.download-btn:hover {
+  background: #1f2937;
+}
+
+/* ========== Print Template Safety ========== */
+#printPO {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  width: 210mm;
+  padding: 20mm;
+  background: white;
+  font-family: "Times New Roman", serif;
+  font-size: 12pt;
+}
+
+.letterhead {
+  width: 110%;
+  height: auto;
+  display: block;
+  margin-bottom: 12mm;
+  margin-left: -8mm;
+  margin-right: 0mm;
+  margin-top: -15mm;
+}
+
+.sign{
+  width:200px;
+  margin-top:30px;
+  margin-bottom: -40px;
+}

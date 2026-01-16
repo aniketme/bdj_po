@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>BDJ Purchase Order</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+
+<div class="app-header">
+  <div class="date-box">
+    <label>Date</label>
+    <input type="date" id="poDate">
+  </div>
+  <h1>BDJ Purchase Order</h1>
+</div>
+
+
+<table id="entryTable">
+<thead>
+<tr>
+<th>Brand</th><th>Size (mm)</th><th>Weight (MT)</th><th>Rate</th><th>Amount</th><th></th>
+</tr>
+</thead>
+<tbody></tbody>
+</table>
+
+<button onclick="addRow()">+ Add Item</button>
+
+<div class="footer-bar">
+  <div class="total-box">
+    Total: Rs. <span id="total">0.00</span>
+  </div>
+  <button class="download-btn" onclick="generatePDF()">Download PDF</button>
+</div>
+
+</div>
+
+<!-- PRINT TEMPLATE -->
+<div id="printPO">
+<img src="assets/letterhead.png" class="letterhead" crossorigin="anonymous">
+
+
+<p><strong>Date:</strong> <span id="pDate"></span></p>
+
+<p>
+To,<br>
+Mr. Partha Pratim Dhar,<br>
+Rashmi Metallics Limited,<br>
+Kolkata
+</p>
+
+<p><strong>Subject: PURCHASE ORDER</strong></p>
+
+<p>Please supply the following material for the building project:-</p>
+
+<table class="printTable">
+<thead>
+<tr>
+<th>Sl</th><th>Brand</th><th>Size</th><th>Weight (MT)</th><th>Rate</th><th>Amount</th>
+</tr>
+</thead>
+<tbody id="printItems"></tbody>
+<tr>
+<td colspan="5" align="right"><strong>Total</strong></td>
+<td id="printTotal"></td>
+</tr>
+</table>
+
+<p><strong>Billing Address:</strong><br>
+BDJ GLASS INDUSTRIES PRIVATE LIMITED,<br>
+185, Girish Ghosh Road, Belurmath, Howrah -711202<br>
+GST: 19AABCB3855C1ZW
+</p>
+
+<p><strong>Delivery Address:</strong><br>
+BDJ GLASS INDUSTRIES PRIVATE LIMITED,<br>
+185, Girish Ghosh Road, Belurmath, Howrah -711202<br>
+GST: 19AABCB3855C1ZW
+</p>
+
+<img src="assets/signature.png" class="sign" crossorigin="anonymous">
+
+<p><strong>Aakash Kumar Agarwal</strong><br>(Director)</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
